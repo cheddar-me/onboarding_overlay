@@ -672,7 +672,7 @@ class AnimatedLabel extends StatelessWidget {
             : null,
         width: size.width,
         height: size.height,
-        margin: step.labelBoxMargin,
+        padding: step.labelBoxMargin,
         child: Stack(
           clipBehavior: Clip.antiAlias,
           alignment: isNotEmptyHole()
