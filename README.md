@@ -406,4 +406,6 @@ return MaterialApp(
     use this to draw custom shapes around the hole. You can use the
     `LabelPainter` as a reference
 
-20. **From 3.2.3** [animateOverlayHole] is a property that can be set to `false` to disable the animation of the overlay hole.
+20. **From 3.2.3**
+  - [animateOverlayHole] is a property that can be set to `false` to disable the animation of the overlay hole.
+  - [labelBoxMargin] is a property that can be set to control the space around the label box.

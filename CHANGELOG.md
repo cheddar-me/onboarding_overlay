@@ -1,4 +1,7 @@
 ## [3.2.3]
+- add: 'labelBoxMargin' property to the OnboardingStep so that the user can
+  control the space around the label box.
+  (Thanks to [MarcinusX](https://github.com/MarcinusX))
 
 - add: 'animateOverlayHole' property to the OnboardingStep so that the user can
   control if the overlay hole should be animated or not.
