@@ -1,3 +1,8 @@
+## [3.2.4]
+- add: 'labelBoxVerticalDistance' property to the OnboardingStep so that the user can
+  control the space between the label box and the overlay hole. Makes kSpace spacing value customizable.
+  (Thanks to [MarcinusX](https://github.com/MarcinusX))
+
 ## [3.2.3]
 - add: 'labelBoxMargin' property to the OnboardingStep so that the user can
   control the space around the label box. Especially useful for limiting maximum width of the label box.

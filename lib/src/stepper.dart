@@ -348,7 +348,10 @@ class OnboardingStepperState extends State<OnboardingStepper>
     double boxHeight,
     MediaQueryData media,
   ) {
-    final double spacer = step.hasArrow ? kArrowHeight + kSpace : kSpace;
+    double spacer = step.labelBoxVerticalDistance;
+    if (step.hasArrow) {
+      spacer += kArrowHeight;
+    }
 
     if (widgetRect.width != 0 && widgetRect.height != 0) {
       final Rect holeRect = step.margin.inflateRect(widgetRect);
@@ -461,7 +464,7 @@ class OnboardingStepperState extends State<OnboardingStepper>
             mediaSize.height -
                 media.padding.top -
                 media.padding.bottom -
-                2 * kSpace);
+                2 * step.labelBoxVerticalDistance);
       }
     }
     // log('radius ${mediaSize.width * kOverlayRatio}');

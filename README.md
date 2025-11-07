@@ -424,3 +424,15 @@ OnboardingStep(
   ),
 ),
 ```
+
+21. **From 3.2.4**
+- [labelBoxVerticalDistance] property to the OnboardingStep so that the user can customize the space between the label box and the overlay hole.
+
+Example:
+```dart
+OnboardingStep(
+  focusNode: focusNodes[0],
+  titleText: 'Tap anywhere to continue',
+  labelBoxVerticalDistance: 16.0, // default is kSpace = 4.0
+),
+```
