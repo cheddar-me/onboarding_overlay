@@ -16,6 +16,7 @@ class Onboarding extends StatefulWidget {
     this.initialIndex = 0,
     this.onChanged,
     this.onEnd,
+    this.onShown,
     this.autoSizeTexts = false,
     required this.steps,
     required this.child,
@@ -34,6 +35,10 @@ class Onboarding extends StatefulWidget {
 
   /// A callback that signal when the `Onboarding` is finished or stopped
   final ValueChanged<int>? onEnd;
+
+  /// A callback that signal when the `Onboarding` is shown.
+  /// The argument is the index of the step that is shown, usually [initialIndex].
+  final ValueChanged<int>? onShown;
 
   /// By default, the value used is false
   /// Sometimes the `titleText` and the `bodyText` might not fit well in the constrained label box,
@@ -120,6 +125,7 @@ class OnboardingState extends State<Onboarding> {
       Overlay.of(context, rootOverlay: widget.globalOnboarding)
           .insert(_overlayEntry);
       controller.setIsVisible(true);
+      widget.onShown?.call(widget.initialIndex);
     }
   }
 
@@ -130,6 +136,7 @@ class OnboardingState extends State<Onboarding> {
       Overlay.of(context, rootOverlay: widget.globalOnboarding)
           .insert(_overlayEntry);
       controller.setIsVisible(true);
+      widget.onShown?.call(index);
     }
   }
 
@@ -141,6 +148,7 @@ class OnboardingState extends State<Onboarding> {
       Overlay.of(context, rootOverlay: widget.globalOnboarding)
           .insert(_overlayEntry);
       controller.setIsVisible(true);
+      widget.onShown?.call(index);
     }
   }
 

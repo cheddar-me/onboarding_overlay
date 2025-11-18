@@ -436,3 +436,14 @@ OnboardingStep(
   labelBoxVerticalDistance: 16.0, // default is kSpace = 4.0
 ),
 ```
+
+- [onShown] callback to the Onboarding widget so that the user can be notified when the onboarding is shown. Could be useful for analytics.
+
+Example:
+```dart
+Onboarding(
+  onShown: (int index) {
+    debugPrint('Onboarding started on step $index');
+  },
+),
+```

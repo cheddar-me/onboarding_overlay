@@ -2,6 +2,8 @@
 - add: 'labelBoxVerticalDistance' property to the OnboardingStep so that the user can
   control the space between the label box and the overlay hole. Makes kSpace spacing value customizable.
   (Thanks to [MarcinusX](https://github.com/MarcinusX))
+- add: 'onShown' callback to the Onboarding widget so that the user can be notified when the onboarding is shown.
+  (Thanks to [MarcinusX](https://github.com/MarcinusX))
 
 ## [3.2.3]
 - add: 'labelBoxMargin' property to the OnboardingStep so that the user can
